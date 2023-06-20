@@ -9,13 +9,11 @@ Modified: !date!
 import { $ } from "../lib/dep/selector/selectors.js";
 import { fullscreen } from "../lib/dep/resizer/resizer.js";
 import { cssReset, invertClr } from "../lib/dep/cssModifier/css.js";
-import { center } from "../lib/dep/center/center.js";
-import { ctx } from "../lib/dep/context/context.js";
-import { point } from "../lib/dep/plotter/plotter.js";
+import { center } from "../lib/dep/transform/center.js";
+import { Graph } from "../lib/dep/graph/graph.js";
 import { toRad } from "../lib/dep/calc/degToRad.js";
-import { f } from "../lib/dep/calc/calc.js";
+
 let c = $("#lightsaber");
-let pen = ctx(c);
 
 cssReset();
 invertClr(c);
@@ -23,7 +21,14 @@ invertClr(c);
 fullscreen(c);
 center(c);
 
-for (let i = -c.width; i <= 36000; i++) {
-//    dataset.push(i*0.0174533);
-    point(c,i,f(toRad(i))*100);
-}
+let g = new Graph(c);
+let f = new Graph(c);
+
+g.setFunction((x)=>{
+    return Math.sin(toRad(x))*100;
+
+})
+.setDomain(-1000,1000)
+.setTransition()
+.setDuration(30000)
+.trace();
