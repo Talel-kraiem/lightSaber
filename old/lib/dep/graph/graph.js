@@ -6,7 +6,7 @@ Created:  2023-06-20T19:21:13.346Z
 Modified: !date!
 */
 
-import { lerp } from "../calc/lerp.js";
+import { lerp } from "../math/lerp.js";
 import { point } from "../plotter/plotter.js";
 
 const SAMPLE_RATE = 0.001;
@@ -25,6 +25,8 @@ class Graph{
             active:false,
             duration:0,
         }
+
+        this.animationLoop;
     }
     setDomain(min,max){
         this.domain["min"]=min;

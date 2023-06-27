@@ -11,7 +11,7 @@ import { fullscreen } from "../lib/dep/resizer/resizer.js";
 import { cssReset, invertClr } from "../lib/dep/cssModifier/css.js";
 import { center } from "../lib/dep/transform/center.js";
 import { Graph } from "../lib/dep/graph/graph.js";
-import { toRad } from "../lib/dep/calc/degToRad.js";
+import { toRad } from "../lib/dep/math/degToRad.js";
 
 let c = $("#lightsaber");
 

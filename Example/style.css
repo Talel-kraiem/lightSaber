@@ -1,0 +1,27 @@
+/*
+Author: Talel Kraiem (kraiemtalel4@gmail.com)
+style.css (c) 2023
+Desc: description
+Created:  2023-06-21T13:56:09.981Z
+Modified: !date!
+*/
+
+/* Genrale Browser Reset Pollyfill */
+
+*{
+    /* Use this Pollyfill If You want  Canvas to Expand 
+       The Whole Window */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* Important Use OverFlow Hidden To Hide Ugly Scrollbars 
+    If canvas Is Expanded The Full Window */
+    overflow: hidden;
+}
+
+
+#lightSaber{
+    /* Feel Free To Stylise How The Canvas Looks */
+    background-color: rgba(35,40,50,255);
+}
