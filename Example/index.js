@@ -67,3 +67,4 @@ graph1.setCoordinateSystem("cartesian");
    Example:
    
 */
+graph1.tracePoints();
